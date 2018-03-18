@@ -23,7 +23,6 @@ int main(int argc, char **argv) {
 	}
 
 	strcpy(outname, argv[1]);
-	strncpy(outname, outname, strlen(outname) - 4);
 	outname[strlen(outname) - 4] = '\0';
 	strcat(outname, ".yaml");
 
@@ -84,61 +83,51 @@ int main(int argc, char **argv) {
 				break;
 			case 52:
 				sscanf(buffer, "%s %s %s %s", s_element, s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "L2prf: %s\n", s_element);
 				break;
 			case 21:
 				sscanf(buffer, "%s %s %s", s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "Tlb-Load-Misses: %s\n", s_element);
 				break;
 			case 25:
 				sscanf(buffer, "%s %s %s", s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "Tlb-Store-Misses: %s\n", s_element);
 				break;
 			case 29:
 				sscanf(buffer, "%s %s %s", s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "Tlb-Total-Misses: %s\n", s_element);
 				break;
 			case 56:
 				sscanf(buffer, "%s %s %s", s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "L1-Load-Misses: %s\n", s_element);
 				break;
 			case 60:
 				sscanf(buffer, "%s %s %s", s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "L1-Store-Misses: %s\n", s_element);
 				break;
 			case 64:
 				sscanf(buffer, "%s %s %s", s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "L1-Total-Misses: %s\n", s_element);
 				break;
 			case 69:
 				sscanf(buffer, "%s %s %s", s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "L2-Load-Misses: %s\n", s_element);
 				break;
 			case 73:
 				sscanf(buffer, "%s %s %s", s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "L2-Store-Misses: %s\n", s_element);
 				break;
 			case 77:
 				sscanf(buffer, "%s %s %s", s_element, s_element, s_element);
-				strncpy(s_element, s_element, strlen(s_element) - 1);
 				s_element[strlen(s_element) - 1] = '\0';
 				fprintf(outfile, "L2-Total-Misses: %s\n", s_element);
 				break;
