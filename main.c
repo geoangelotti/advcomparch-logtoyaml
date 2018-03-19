@@ -19,6 +19,7 @@ int main(int argc, char **argv) {
 
 	infile = fopen(argv[1], "r");
 	if (infile == NULL) {
+		printf("Can not open <%s> correctly\n", argv[1]);
 		return 0;
 	}
 
@@ -28,6 +29,7 @@ int main(int argc, char **argv) {
 
 	outfile = fopen(outname, "w+");
 	if (outfile == NULL) {
+		printf("Can not create <%s> correctly\n", outname);
 		return 0;
 	}
 
