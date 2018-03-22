@@ -86,6 +86,9 @@ int main(int argc, char **argv) {
 			case 52:
 				sscanf(buffer, "%s %s %s %s", s_element, s_element, s_element, s_element);
 				s_element[strlen(s_element) - 1] = '\0';
+				if (strcmp(s_element, "N") == 0) {
+					strcpy(s_element, "0");
+				}
 				fprintf(outfile, "L2prf: %s\n", s_element);
 				break;
 			case 21:
